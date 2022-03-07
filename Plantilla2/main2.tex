@@ -1,0 +1,43 @@
+\documentclass[12pt, letterpaper, twoside]{article}
+\usepackage[utf8]{inputenc}%codification of the document
+
+\usepackage{comment}
+
+\title{First document}
+\author{Hubert Farnsworth \thanks{funded by the Overleaf team}}
+\date{February 2014}
+
+%Here begins the body of the document
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\begin{abstract}
+This is a simple paragraph at the beginning of the 
+document. A brief introduction about the main subject.
+\end{abstract}
+
+In this document some extra packages and parameters
+were added. There is a encoding package
+an a pagesize and fontsize parameters.
+
+This line will start a second Paragraph. And I can break\\ the lines \\
+and continue in a new line.
+
+This documents contains a lot of comments, non of them
+will appear here, only this text.
+
+This documents contains a lot of comments, non of them
+will appear here, only this text.
+
+\begin{comment}
+This text won't show up in the compiled pdf
+this is just a multi-line comment. Useful
+to, for instance, comment out slow-rendering
+while working on the draft.
+\end{comment}
+
+\end{document}
+

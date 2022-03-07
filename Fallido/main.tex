@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{a4paper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Title}
+\author{Haoyun Qin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{cancel}
+\title{Quiz 1}
+\author{David Gonzalez}
+\date{February 2022}
+
+\begin{document}
+
+\maketitle
+\medium
+
+    
+\begin{equation}
+\lim_{z\to 0} \frac{\sin z-\tan z}{z^2\cdot \sin (2z)}\end{equation}\\
+\\
+\begin{equation}
+=\lim_{z\to 0} \frac{\sin z-\frac{\sin z}{\cos z}}{z^2\cdot 2\sin z \cdot \cos z}\end{equation} \\
+\begin{equation}
+    \sin (2x) = 2 \sin x \cdot \cos x
+\end{equation}
+\\
+\\
+\begin{equation}
+=\lim_{z\to 0} \frac{\sin z-\frac{\sin z}{\cos z}}{2z^2\cdot \sin z \cdot \cos z}\end{equation}\\
+\\
+\begin{equation}
+=\frac{1}{2}\lim_{z\to 0} \frac{\sin z-\frac{\sin z}{\cos z}}{z^2\cdot \sin z \cdot \cos z}\end{equation}\\
+\\
+\begin{equation}
+=\frac{1}{2}\lim_{z\to 0} \frac{\cancel{\sin z}(1-\frac{1}{\cos})}{z^2\cdot \cancel{\sin z} \cdot \cos}\end{equation}\\
+\\
+\begin{equation}
+=\frac{1}{2}\lim_{z\to 0} \frac{1-\frac{1}{\cos}}{z^2\cdot \cos}\end{equation}\\
+\\
+\begin{equation}
+=\frac{1}{2}\lim_{z\to 0} \frac{\frac{\cos z -1}{\cos z}}{z^2\cdot\cos z}
+\end{equation}
+\\
+\\
+
+=$\frac{1}{2}\lim_{z\to 0} \frac{\cos z -1}{z^2 \cdot \cos ^2 z}$\\
+\\
+
+$=  \frac{1}{2}\lim_{z\to 0} \frac{1}{\cos ^2 z}\cdot \lim_{z\to 0} \frac{\cos z -1}{z^2}$\\
+\\
+
+=$\frac{1}{2}\cancel{\lim_{z\to 0} \frac{1}{\cos ^2 z}}\cdot \lim_{z\to 0} \frac{\cos z -1}{z^2}$\\
+\\
+
+=$\frac{1}{2}\lim_{z\to 0} \frac{\cos z -1}{z^2}$\\
+\\
+
+=$\frac{1}{2}\lim_{z\to 0} \frac{\cos z -1}{z^2}\cdot \frac{\cos z +1}{\cos z +1}$\\
+\\
+
+=$\frac{1}{2}\lim_{z\to 0} \frac{\cos ^2 z -1}{z^2\cdot \cos z +1}$\\
+\\
+
+=$\frac{1}{2}\lim_{z\to 0} \frac{-\sin ^2 z}{z^2\cdot \cos z +1}$\\
+\\
+
+=$-\frac{1}{2}\lim_{z\to 0} \frac{1}{\cos z +1}\cdot \lim_{z\to 0} \frac{\sin ^2 z}{z^2}$ \hspace{70} $\lim_{z\to 0} \frac{\sin z}{z}$\\
+\\
+
+=$-\frac{1}{2}\lim_{z\to 0} \frac{1}{\cos z +1}$\\
+\\
+
+=$-\frac{1}{2} \cdot \frac{1}{2}$\\
+\\
+
+=$-\frac{1}{4}$
+
+
+\end{document}
