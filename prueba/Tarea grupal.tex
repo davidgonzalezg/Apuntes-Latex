@@ -1,0 +1,151 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,cancel}
+\usepackage[spanish]{babel}
+\title{Tarea \# 4, tarea grupal}
+\author{David Esteban González González 2020425932\\Derek Umaña Quirós
+2019208874\\Jefferson Arias Gutiérrez 2021131112\\María José Venegas Díaz 
+202151065\\Brainer Chacón Orellana 2021039600}
+\date{March 2022}
+\begin{document}
+
+\maketitle
+Calcular las derivadas por definición de las funciones:\\
+    Definición de una derivada:\\
+\medium
+\begin{equation*}
+    \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}
+\end{equation*}
+\\
+$f(x) = mx+b$
+\begin{equation*} \label{eq1}
+\begin{split}
+ \\\lim_{h\to 0} \frac{m(x+h)+b-(mx+b)}{h}\\
+     &=\lim_{h\to 0}\frac{m(x+h)+\cancel{b}-mx\cancel{-b}}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{mx+mh-mx}{h}\\
+     \\
+     &=\lim_{h\to 0}\fra{\cancel{mx}+mh\cancel{-mx}}{h}\\
+     \\
+      &=\lim_{h\to 0}\frac{mh}{h}\\
+      \\
+     &=\lim_{h\to 0}\frac{m\cancel{h}}{\cancel{h}}\\
+     \\
+     &=m
+\end{split}
+\end{equation*}
+\\
+$g(x) = x^3$
+\begin{equation*} \label{eq1}
+\begin{split}
+ \\\lim_{h\to 0} \frac{(x+h)^3-x^3}{h}\\
+     &=\lim_{h\to 0}\frac{x^3+3x^2h+3xh^2+h^3-x^3}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{\cancel{x^3}+3x^2h+3xh^2+h^3\cancel{-x^3}}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{3x^2h+3xh^2+h^3}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{h(3x^2+3xh+h^2)}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{\cancel{h}(3x^2+3xh+h^2)}{\cancel{h}}\\
+     \\
+     &=\lim_{h\to 0}3x^2+3xh+h^2\\
+     \\
+     &=3x^2+3\cdot0x+0^2\\
+     \\
+     &=3x^2\\
+\end{split}
+\end{equation*}
+\\
+$g(x) = c$ constante
+\begin{equation*} 
+\begin{split}
+ \\\lim_{h\to 0}\frac{c-c}{h}\\
+     &=\lim_{h\to 0}\frac{\cancel{c}\cancel{-c}}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{0}{h}\\
+     &=\cancelto{0}{\lim_{h\to 0}\frac{0}{h}}\\
+     \\
+     &=0
+\end{split}
+\end{equation*}
+
+$g(x) = \sqrt{x+1}$ 
+\begin{equation*} 
+\begin{split}
+ \\\lim_{h\to 0}\frac{\sqrt{x+h+1}-\sqrt{x+1}}{h}\\
+     &=\lim_{h\to 0}\frac{\sqrt{x+h+1}-\sqrt{x+1}}{h}\cdot \frac{\sqrt{x+h+1}+\sqrt{x+1}}{\sqrt{x+h+1}+\sqrt{x+1}} \\
+     \\
+     &=\lim_{h\to 0}\frac{x+h+1-(x+1)}{h(\sqrt{x+h+1}+\sqrt{x+1})}\\
+     \\
+     &=\lim_{h\to 0}\frac{\cancel{x}+h\cancel{+1}\cancel{-x}\cancel{-1}}{h(\sqrt{x+h+1}+\sqrt{x+1})}\\
+     \\
+     &=\lim_{h\to 0}\frac{\cancel{h}}{\cancel{h}(\sqrt{x+h+1}+\sqrt{x+1})}\\
+     \\
+     &=\lim_{h\to 0}\frac{1}{\sqrt{x+h+1}+\sqrt{x+1}}\\
+     \\
+     &=\frac{1}{\sqrt{x+0+1}+\sqrt{x+1}}\\
+     \\
+     &=\frac{1}{\sqrt{x+1}+\sqrt{x+1}}\\
+     \\
+     &=\frac{1}{2\sqrt{x+1}}\\
+\end{split}
+\end{equation*}
+
+$g(x) = \cos x$ 
+\begin{equation*} 
+\begin{split}
+ \\\lim_{h\to 0}\frac{\cos(x+h)-\cos(x)}{h}\\
+     &=\lim_{h\to 0}\frac{\cos(x+h)-\cos(x)}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{\cos(x)\cdot\cos(h)-\sin(x)\cdot \sin(h)-\cos(x)}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{[\cos(x)\cdot\cos(h)-\cos(x)]-\sin(x)\cdot \sin(h)}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{\cos(x)[\cos(h)-1]-\sin(x)\cdot \sin(h)}{h}\\
+     \\
+     &=\lim_{h\to 0}\frac{\cos(x)[\cos(h)-1]}{h}+\lim_{h\to 0}\frac{-\sin(x)\cdot \sin(h)}{h} \\\
+     \\
+     &=\cos(x)\lim_{h\to 0}(\frac{[\cos(h)-1]}{h})-\sin(x)\lim_{h\to 0} \frac{\sin(h)}{h} \\
+     \\
+     &=-\cos(x)\cancelto{0}{\lim_{h\to 0}(\frac{[1-\cos(h)]}{h})}-\sin(x)\cancelto{1}{\lim_{h\to 0} \frac{\sin(h)}{h}} \\
+     \\
+     &=-\cos(x)\cancelto{0}{\lim_{h\to 0}(\frac{[1-\cos(h)]}{h})}-\sin(x)\cancelto{1}{\lim_{h\to 0} \frac{\sin(h)}{h}} \\
+     \\
+     &=-\cos(x)\cdot0-\sin(x)\cdot 1 \\
+     \\
+     &=-\sin(x)\\
+\end{split}
+\end{equation*}
+\newpage
+
+Encuentre la recta tangente a la curva $y=x^3$ en el punto $(2,8)$
+
+\begin{equation*}
+    f(x)=x^3\\
+\end{equation*}
+\begin{equation*}
+    f^\prime(x)=3x^2
+\end{equation*}\\
+Una vez tenemos la recta tangente, evaluamos en $f^\prime$, con esto obtendremos la pendiente de la recta tangente.
+\begin{equation*}
+    f^\prime(2)=3\cdot2^2\\
+\end{equation*}
+\begin{equation*}
+    m=12
+\end{equation*}
+Ahora con la ecuación punto-pentdiente obtenemos la ecuación de la recta:
+\begin{equation*}
+    y-y_0=m(x-x_0)
+\end{equation*}
+sustituimos valores y luego despejamos y:
+\begin{equation*}
+    y-8=12(x-2)
+\end{equation*}
+la ecuación de la recta tangente a $x^3$ en el punto (2,8) es:
+\begin{equation*}
+    y=12x-16
+\end{equation*}
+\end{document}
+
+
