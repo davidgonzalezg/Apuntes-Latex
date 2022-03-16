@@ -4,3 +4,4 @@
 *.fdb_latexmk
 *.log
 *.synctex(busy)
+*.synctex.gz
