@@ -1,0 +1,86 @@
+%Preámbulo
+\documentclass[stu, 12pt, letterpaper, donotrepeattitle, floatsintext, natbib]{apa7}
+\usepackage[utf8]{inputenc}
+\usepackage{comment}
+\usepackage{marvosym}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage[normalem]{ulem}
+\usepackage[spanish]{babel} 
+\usepackage{siunitx}
+\usepackage{tkz-euclide}
+
+\selectlanguage{spanish}
+\useunder{\uline}{\ul}{}
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\\}
+
+% Portada
+\thispagestyle{empty}
+\title{\Large Proyecto Cálculo Diferencial e Integral}
+\author{David Esteban González González (2020425932) \\Derek Umaña Quirós
+(2019208874) \\Jefferson Arias Gutiérrez (2021131112)\\María José Venegas Díaz 
+(202151065)\\Brainer Chacón Orellana (2021039600)\\Raquel Peraza Garita (2021032478)} % (autores separados, consultar al docente)
+% Manera oficial de colocar los autores:
+%\author{Autor(a) I, Autor(a) II, Autor(a) III, Autor(a) X}
+\affiliation{Instituto Tecnológico de Costa Rica}
+\course{MA1102 Cálculo Diferencial e Integral\\Grupo 02\\Subgrupo 04}
+\professor{Manuel Calderón Solano}
+\duedate{Prime Semestre 2022}
+\begin{document}
+\maketitle
+% Índices
+\pagenumbering{roman}
+    % Contenido
+\renewcommand\contentsname{\largeÍndice}
+\tableofcontents
+\setcounter{tocdepth}{2}
+\newpage
+    % Fíguras
+\renewcommand{\listfigurename}{\largeÍndice de fíguras}
+\listoffigures
+\newpage
+    % Tablas
+\renewcommand{\listtablename}{\largeÍndice de tablas}
+\listoftables
+\newpage
+
+% Cuerpo
+\pagenumbering{arabic}
+
+% Referencias
+\renewcommand\refname{\large\textbf{Referencias}}
+\bibliography{mibibliografia}{\large Ejercicios del Proyecto}
+    \subsection{Ejercicio 1. Optimización}
+        ASADA MONTAÑA VERDE\\
+        Este año la Asada Montaña Verde adquirió un terreno para construir un tanque de almacenamiento
+        con el objetivo de mejorar la presión con que llega el agua a las casas más cercanas.
+        Se necesitan almacenar 23 000 litros de agua potable, gastando la menor cantidad de material
+        en el tanque. Diseña con tu equipo de trabajo la forma del tanque para la ASADA y,
+        con derivadas, determina las medidas que minimicen el gasto.
+        \subsubsection{Solución}
+        \begin{multicols}{2}
+                \begin{tikzpicture}
+                        \tkzInit[xmin=0,xmax=7,ymax=8]
+                        \tkzClip
+                        %\tkzGrid
+                        \tkzDefPoints{3.5/1/A, 3.5/5/B} ;
+                        \draw[thick,blue] (A) ellipse (2 and 0.5);
+                        \draw[thick,blue] (B) ellipse (2 and 0.5);
+                        \draw[thick,blue] (1.5,1) -- (1.5,5);
+                        \draw[thick,blue] (5.5,1) -- (5.5,5);  
+                        \draw[dashed,white,thick] (5.5,1) arc (0:180:2 and 0.5);
+                        \tkzLabelSegment[below](A,B){23 000 L}; 
+                \end{tikzpicture}
+                \caption{Figura 1}
+                
+        \end{multicols}
+
+\newpage
+
+
+
+\end{document}
