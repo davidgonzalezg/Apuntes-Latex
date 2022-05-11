@@ -6,7 +6,7 @@
 \usepackage{geometry}
 \usepackage{graphicx}
 \usepackage{amssymb}
-\usepackage{amsmath}
+\usepackage{amsmath,cancel}
 \usepackage{amsthm}
 \usepackage{empheq}
 \usepackage{mdframed}
@@ -53,12 +53,24 @@
 \pgfplotsset{width=8cm,compat=1.9}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aprendizaje continuo David Gonzalez %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Title}
-\author{Haoyun Qin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aprendizaje continuo David González %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Trabajo \#1 de Aprendizaje Continuo }
+\author{David González}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-    \maketitleTrabajo \#1 de Aprendizaje Continuo
-    Hola mundo
+\maketitle
+
+\begin{equation*} \label{eq1}
+    \begin{split}
+    \\\lim_{x\to - \infty } \frac{-x}{\sqrt{4x^2+6}-9x}\\
+        &=\lim_{x\to - \infty } \frac{-x}{\sqrt{x^2(4+\frac{6}{x^2})}-9x}\\\\
+        &=\lim_{x\to - \infty } \frac{-x}{\sqrt{x^2(4+\frac{6}{x^2})}-9x}\\\\
+        &=\lim_{x\to - \infty } \frac{-x}{-x\sqrt{(4+\frac{6}{x^2})}-9x}\\\\
+        &=\lim_{x\to - \infty } \frac{\cancel{-x}}{\cancel{-x}(\sqrt{(4+\frac{6}{x^2})}-9)}\\\\
+        &=\lim_{x\to - \infty } \frac{\cancel{-1}}{\sqrt{4+\frac{6}{x^2}}-9}\\\\
+        &=\frac{\cancel{-1}}{\sqrt{4+\frac{6}{-\infty}}-9}\\\\
+        &=
+    \end{split}
+\end{equation*}
 \end{document}
